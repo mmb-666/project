@@ -30,6 +30,7 @@ public class CourseBaseInfoController {
     public PageResult<CourseBase> list(PageParams pageParams, @RequestBody QueryCourseParamDto queryCourseParams) {
         SecurityUtil.XcUser user = SecurityUtil.getUser();
         Long companyId = null;
+        int test = 0;
         if (StringUtils.isNotEmpty(user.getCompanyId())) {
             companyId = Long.parseLong(user.getCompanyId());
         }
